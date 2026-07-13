@@ -26,6 +26,20 @@ It demonstrates how to ingest raw data, apply data quality checks and transforma
    - Reads the cleansed Silver data.
    - Aggregates the data to calculate `daily_revenue` and `total_orders` grouped by `order_date` and `product_category`.
    - Saved as an optimized Delta Table ready for BI tools (e.g., Tableau, PowerBI) and business reporting.
+  
+## 📊 Business Insights & Analytics (Gold Layer)
+Once the pipeline runs successfully, data is ready for BI consumption. Here is an example of an analytical query running on top of the Gold Layer:
+
+| category    | total_revenue | total_orders | average_order_value |
+|-------------|---------------|--------------|---------------------|
+| Electronics | 1948.99       | 4            | 487.25              |
+| Home        | 314.98        | 3            | 104.99              |
+| Clothing    | 159.98        | 3            | 53.33               |
+| Books       | 64.90         | 2            | 32.45               |
+
+### 🛠️ Production Best Practices Implemented
+* **Idempotency:** The Silver and Gold layers use `overwrite` mode, ensuring that rerunning the pipeline with the same data won't create duplicates.
+* **Data Lineage:** Added `ingestion_time` and `source_file_name` in the Bronze layer for strict auditability.
 
 ## ⚙️ Tech Stack
 * **Compute & Processing:** Databricks, Apache Spark (PySpark)
