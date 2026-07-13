@@ -1,0 +1,13 @@
+order_id,customer_id,product_category,order_status,quantity,product_price,order_date
+1001,C_A12,Electronics,completed,1,599.99,2026-07-10
+1002,C_B34,Clothing,pending,2,29.99,2026-07-11
+1003,C_C56,Electronics,shipped,5,12.50,2026-07-11
+1001,C_A12,Electronics,completed,1,599.99,2026-07-10
+1004,,Books,completed,1,15.00,2026-07-12
+1005,C_D78,Home,PENDING,3,45.00,2026-07-12
+1006,C_E90,Electronics,cancelled,1,1099.00,2026-07-13
+,C_F12,Clothing,completed,2,35.00,2026-07-13
+1007,C_G34,Books,shipped,10,4.99,2026-07-13
+1008,C_H56,Electronics,completed,1,150.00,2026-07-13
+1009,C_I78,Clothing,Pending,4,25.00,2026-07-13
+1010,C_J90,Home,completed,2,89.99,2026-07-13
